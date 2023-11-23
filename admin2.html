@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Reports</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+
+        .nav-tabs {
+            margin-top: 20px;
+        }
+
+        .tab-content {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Admin Dashboard - Reports</h2>
+
+    <!-- Reports Section -->
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Reports</h5>
+
+            <!-- Tabbed Navigation -->
+            <ul class="nav nav-tabs" id="myTabs">
+                <li class="nav-item">
+                    <a class="nav-link active" id="passedInSemester-tab" data-toggle="tab" href="#passedInSemester">Passed in Semester</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="passedInYear-tab" data-toggle="tab" href="#passedInYear">Passed in Year</a>
+                </li>
+                <!-- Add more tabs for other reports -->
+                <li class="nav-item">
+                  <a class="nav-link" id="failedInSem-tab" data-toggle="tab" href="#passedInYear">Passed in Year</a>
+              </li>
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <!-- Passed All Courses in a Semester -->
+                <div class="tab-pane fade show active" id="passedInSemester">
+                    <h6>Students who have passed all courses in a semester</h6>
+                    <div id="passedInSemesterContent"></div>
+                </div>
+
+                <!-- Passed All Courses in a Year -->
+                <div class="tab-pane fade" id="passedInYear">
+                    <h6>Students who have passed all courses in a year</h6>
+                    <div id="passedInYearContent"></div>
+                </div>
+                <!-- Add more tab content for other reports -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="admin_dashboard.js"></script>
+</body>
+</html>
